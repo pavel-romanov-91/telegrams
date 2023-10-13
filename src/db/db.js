@@ -19,3 +19,4 @@ function getData(){
         {title:'Water', price:17.99, Image: waterImg, id:8}
     ]
 }
+export default getData

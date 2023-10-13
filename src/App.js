@@ -1,6 +1,8 @@
-
+import { useState, useEffect } from 'react';
 import './App.css';
 import Button from './Components/Button/Button';
+import Card from './Components/Card/Card';
+const {getData} = require("./db/db")
 
 function App() {
   return (
