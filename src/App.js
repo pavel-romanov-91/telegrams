@@ -3,14 +3,21 @@ import './App.css';
 import Button from './Components/Button/Button';
 import Card from './Components/Card/Card';
 const {getData} = require("./db/db")
+const foods = getData();
 
 function App() {
   return (
     <div>
-      <h1>Hi i am shopoBot</h1>
-      <Button type={'add'} title={'+'} disable={'false'}></Button>
-      <Button type={'remove'} title={'-'} disable={'false'}></Button>
-      <Button type={'checkout'} title={'checkout'} disable={'false'}></Button>
+      <h1 className='heading'>Food OrDer</h1>
+      <div className='cards__container'>
+        {
+          foods.map((food)=>{
+            return(
+              <Card food={food} key={food.id} />//onAdd={onAdd} onRemove={onRemove}
+            )
+          })
+        }
+      </div>
     </div>
   );
 }
