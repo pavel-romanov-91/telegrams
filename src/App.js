@@ -31,12 +31,12 @@ function App() {
   return (
     <div>
       <h1 className='heading'>Food OrDer</h1>
-      <Cart cartItems = {cartItems}/>
+      <Cart cartItems = {cartItems} />
       <div className='cards__container'>
         {
           foods.map((food)=>{
             return(
-              <Card food={food} key={food.id} />//onAdd={onAdd} onRemove={onRemove}
+              <Card food={food} key={food.id} onAdd={onAdd} onRemove={onRemove}/>
             )
           })
         }
