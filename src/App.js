@@ -4,9 +4,13 @@ import Cart from './Components/Cart/Cart';
 import Card from './Components/Card/Card';
 const {getData} = require("./db/db")
 const foods = getData();
+const tele = window.Telegram.WebApp;
 
 function App() {
   const[cartItems, setCartItems] = useState([])
+  useEffect(() => {
+    tele.ready();
+  });
   const onAdd=(food)=>{
     const exist = cartItems.find((x) => x.id===food.id);
     if (exist) {

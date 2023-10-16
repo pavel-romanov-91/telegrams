@@ -1,3 +1,4 @@
+// 6347545136:AAGoAD4XGzdkMvRzyfRe3b3rd_x8uNzSPVg
 import React from 'react'
 import './Cart.css'
 import Button from '../Button/Button'
@@ -7,7 +8,7 @@ function Cart({cartItems, onCheckout}) {
   return (
     <div className='cart__container'>
       {
-        cartItems.length ===0 ? 'No Items in cart' : ''
+        cartItems.length === 0 ? 'No Items in cart' : ''
       }
       <br/> 
       <span>Total price: ${totalPrice.toFixed(2)}</span>
