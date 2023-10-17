@@ -1,4 +1,4 @@
-// 6347545136:AAGoAD4XGzdkMvRzyfRe3b3rd_x8uNzSPVg
+
 import React from 'react'
 import './Cart.css'
 import Button from '../Button/Button'
